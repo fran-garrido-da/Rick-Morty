@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+    <title>R & M</title>
+  </head>
+  <body class="bg-secondary">
+    <main class="container bg-secondary">
+      <header class="text-center bg-secondary my-2 sticky-md-top">
+        <nav class="navbar navbar-expand-md bg-secondary">
+          <div class="container-fluid">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Filter by status
+                  </a>
+                  <ul class="dropdown-menu bg-secondary-subtle">
+                    <li>
+                      <button class="dropdown-item" id="aliveFilter">
+                        Alive
+                      </button>
+                    </li>
+                    <li>
+                      <hr class="dropdown-divider" />
+                    </li>
+                    <li>
+                      <button class="dropdown-item" id="deadFilter">
+                        Dead
+                      </button>
+                    </li>
+                    <li>
+                      <hr class="dropdown-divider" />
+                    </li>
+                    <li>
+                      <button class="dropdown-item" id="unknownFilter">
+                        Unknown
+                      </button>
+                    </li>
+                    <li>
+                      <hr class="dropdown-divider" />
+                    </li>
+                    <li>
+                      <button class="dropdown-item" id="noFilter">
+                        No Filter
+                      </button>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <section class="bg-secondary">
+        <header>
+          <h3>Character Profiles</h3>
+        </header>
+        <div
+          id="charactersContainer"
+          class="row gap-3 justify-content-center"
+        ></div>
+      </section>
+      <nav>
+        <ul class="pagination justify-content-center">
+          <li class="page-item">
+            <button
+              type="button"
+              class="btn bg-secondary-subtle"
+              id="prevButton"
+            >
+              Previous Page
+            </button>
+          </li>
+          <li class="page-item">
+            <button
+              type="button"
+              class="btn bg-secondary"
+              id="activePage"
+            ></button>
+          </li>
+          <li class="page-item">
+            <button type="button" class="btn bg-secondary">of</button>
+          </li>
+          <li class="page-item">
+            <button
+              type="button"
+              class="btn bg-secondary"
+              id="maxPage"
+            ></button>
+          </li>
+          <li class="page-item">
+            <button
+              type="button"
+              class="btn bg-secondary-subtle"
+              id="nextButton"
+            >
+              Next Page
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </main>
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
